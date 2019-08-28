@@ -15,7 +15,9 @@ export default props => (
       <ListLink to="/" style={props.activeLink === 'home' ? activeLinkStyle : null}>Home</ListLink>
       <ListLink to="/about/" style={props.activeLink === 'about' ? activeLinkStyle : null}>About</ListLink>
       <ListLink to="/contact/" style={props.activeLink === 'contact' ? activeLinkStyle : null}>Contact</ListLink>
-      <ListLink to="/about-css-modules/" style={props.activeLink === 'about-css-modules' ? activeLinkStyle : null}>About CSS Modules</ListLink>
+      <ListLink to="/about-css-modules/" style={props.activeLink === 'about-css-modules' ? activeLinkStyle : null}>CSS Modules</ListLink>
+      <ListLink to="/index-pandas/" style={props.activeLink === 'home-pandas' ? activeLinkStyle : null}>Pandas</ListLink>
+      <ListLink to="/about-pandas/" style={props.activeLink === 'about-pandas' ? activeLinkStyle : null}>About Pandas</ListLink>
     </ul>
   </nav>
 );

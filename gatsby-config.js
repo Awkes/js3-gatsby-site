@@ -5,7 +5,11 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `Gatsby Tutorials`,
+  },
   plugins: [
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

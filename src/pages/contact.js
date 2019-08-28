@@ -1,16 +1,20 @@
 import React from "react";
 import Container from "../components/container";
-// import {Link} from "gatsby";
 import Header from "../components/header";
-import Menu from "../components/menu";
+import Layout from "../components/layout";
 
 export default() => (
   <div style={{color: 'teal'}}>
-    {/* <Link to="/">Home</Link> */}
-    <Menu activeLink="contact" />
-    <Container>
-      <Header headerText="Contact" />
-      <p>Send us a message!</p>
-    </Container>
+    <Layout page="contact">
+      <Container>
+        <Header headerText="Contact" />
+        <p>Send us a message!</p>
+
+        <Header headerText="I'd love to talk! Email me at the address below" />
+        <p>
+          <a href="mailto:me@example.com">me@example.com</a>
+        </p>
+      </Container>
+    </Layout>
   </div>
 );

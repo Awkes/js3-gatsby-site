@@ -1,17 +1,22 @@
 import React from "react";
 import Container from "../components/container";
-// import {Link} from "gatsby";
 import Header from "../components/header";
-import Menu from "../components/menu";
+import Layout from "../components/layout";
 
 export default() => (
   <div style={{ color: `purple`}}>
-    {/* <Link to="/contact/">Contact</Link> */}
-    <Menu activeLink="home" />
-    <Container>
-      <Header headerText="Hello Gatsby!" />
-      <p>What a world.</p>
-      <img src="https://source.unsplash.com/random/400x200" alt="" />
-    </Container>
+    <Layout page="home">
+      <Container>
+        <Header headerText="Hello Gatsby!" />
+        <p>What a world.</p>
+        <img src="https://source.unsplash.com/random/400x200" alt="" />
+        
+        <Header headerText="Hi! I'm building a fake Gatsby site as part of a tutorial!" />
+        <p>
+          What do I like to do? Lots of course but definitely enjoy building
+          websites.
+        </p>
+      </Container>
+    </Layout>
   </div>
 )

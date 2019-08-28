@@ -1,25 +1,21 @@
 import React from "react";
 import {Link} from "gatsby";
 
-export default props => {
-  const linkStyle = { padding: '5px 20px', color: 'hotpink', textDecoration: 'none' };
-  const activeLinkStyle = { padding: '5px 20px', color: 'hotpink', textDecoration: 'underline' };
+const ListLink = props => (
+  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+    <Link to={props.to} style={props.style}>{props.children}</Link>
+  </li>
+)
 
-  return (
-    <nav style={{textAlign: 'center'}}>
-      <Link to="/" style={props.activeLink === 'home' ? activeLinkStyle : linkStyle}>
-        Home
-      </Link>
-      <Link to="/about/" style={props.activeLink === 'about' ? activeLinkStyle : linkStyle}>
-        About
-      </Link>
-      <Link to="/contact/" style={props.activeLink === 'contact' ? activeLinkStyle : linkStyle}>
-        Contact
-      </Link>
-      <Link to="/about-css-modules/" style={props.activeLink === 'about-css-modules' ? activeLinkStyle : linkStyle}>
-        About CSS Modules
-      </Link>
-      <hr />
-    </nav>
-  );
-}
+const activeLinkStyle = { color: '#000', fontWeight: 'bold', textDecoration: 'underline' };
+
+export default props => (
+  <nav style={{float: 'right', display: 'flex', alignItems: 'center', justifyContent: 'flex-end'}}>
+    <ul style={{ listStyle: `none`, margin: 0, padding: 0 }}>
+      <ListLink to="/" style={props.activeLink === 'home' ? activeLinkStyle : null}>Home</ListLink>
+      <ListLink to="/about/" style={props.activeLink === 'about' ? activeLinkStyle : null}>About</ListLink>
+      <ListLink to="/contact/" style={props.activeLink === 'contact' ? activeLinkStyle : null}>Contact</ListLink>
+      <ListLink to="/about-css-modules/" style={props.activeLink === 'about-css-modules' ? activeLinkStyle : null}>About CSS Modules</ListLink>
+    </ul>
+  </nav>
+);

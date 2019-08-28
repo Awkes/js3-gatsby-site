@@ -1,12 +1,10 @@
 import React from "react";
-import Container from "../components/container";
 import Header from "../components/header";
 import Layout from "../components/layout";
 
 export default() => (
   <div style={{ color: `purple`}}>
     <Layout page="home">
-      <Container>
         <Header headerText="Hello Gatsby!" />
         <p>What a world.</p>
         <img src="https://source.unsplash.com/random/400x200" alt="" />
@@ -16,7 +14,6 @@ export default() => (
           What do I like to do? Lots of course but definitely enjoy building
           websites.
         </p>
-      </Container>
     </Layout>
   </div>
 )

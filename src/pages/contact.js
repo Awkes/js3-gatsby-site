@@ -1,12 +1,10 @@
 import React from "react";
-import Container from "../components/container";
 import Header from "../components/header";
 import Layout from "../components/layout";
 
 export default() => (
   <div style={{color: 'teal'}}>
     <Layout page="contact">
-      <Container>
         <Header headerText="Contact" />
         <p>Send us a message!</p>
 
@@ -14,7 +12,6 @@ export default() => (
         <p>
           <a href="mailto:me@example.com">me@example.com</a>
         </p>
-      </Container>
     </Layout>
   </div>
 );

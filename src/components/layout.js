@@ -1,9 +1,8 @@
 import React from "react";
 import Header from "../components/header";
 import Menu from "../components/menu";
+import Container from "../components/container";
 import { useStaticQuery, Link, graphql } from "gatsby"
-// import { css } from "@emotion/core";
-// import { rhythm } from "../utils/typography";
 
 export default ({page, children}) => {
   const data = useStaticQuery(
@@ -26,7 +25,9 @@ export default ({page, children}) => {
         </Link>
         <Menu activeLink={page} />
       </header>
-      {children}
+      <Container>
+        {children}
+      </Container>
     </div>
   )
 }

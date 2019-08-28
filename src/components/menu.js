@@ -19,6 +19,7 @@ export default props => (
       <ListLink to="/index-pandas/" style={props.activeLink === 'home-pandas' ? activeLinkStyle : null}>Pandas</ListLink>
       <ListLink to="/about-pandas/" style={props.activeLink === 'about-pandas' ? activeLinkStyle : null}>About Pandas</ListLink>
       <ListLink to="/my-files/" style={props.activeLink === 'my-files' ? activeLinkStyle : null}>My Files</ListLink>
+      <ListLink to="/md-files/" style={props.activeLink === 'md-files' ? activeLinkStyle : null}>Markdown Files</ListLink>
     </ul>
   </nav>
 );
